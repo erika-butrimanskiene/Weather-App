@@ -10,30 +10,30 @@ body {
   background: linear-gradient(-90deg, #2d82cc, #0f4c81);
 }
 
-.inputAndButtonContainer {
+.input-button-container {
   display: flex;
   justify-content: center;
 }
-.inputAndButtonContainer button {
+.input-button-container button {
   width: 160px;
-  margin-top: 60px;
-  height: 40px;
+  margin-top: 35px;
+  height: 35px;
   background-color: rgba(250, 246, 7, 0.9);
-  color: white;
+  color: #0f4c81;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   border: none;
   border-radius: 30px;
 }
-.inputAndButtonContainer button:focus {
+.input-button-container button:focus {
   outline: none;
 }
-.inputAndButtonContainer button:hover {
+.input-button-container button:hover {
   background-color: white;
   color: #515152;
 }
-.inputAndButtonContainer input {
-  margin: 65px 25px 0px 25px;
+.input-button-container input {
+  margin: 40px 25px 0px 25px;
   border: none;
   border-bottom: 1.5px solid white;
   color: white;
@@ -41,52 +41,39 @@ body {
   font-size: 25px;
   font-family: "Roboto", sans-serif;
   background: transparent;
-  width: 60%;
+  width: 50%;
 }
-.inputAndButtonContainer input:focus {
+.input-button-container input:focus {
   outline: none;
 }
 
-.headerStyle {
+.header {
   background-color: white;
   display: flex;
 }
-.headerStyle p {
-  font-size: 25px;
-  line-height: 80px;
+.header p {
+  font-size: 15px;
+  line-height: 50px;
   font-weight: bolder;
   color: #0f4c81;
   font-family: "Roboto", sans-serif;
   padding-left: 30px;
 }
-.headerStyle img {
-  height: 45px;
+.header img {
+  height: 25px;
   margin-top: 15px;
   padding-left: 20px;
 }
 
-.divMainStyle {
+.search-output-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-.divMainStyle header {
-  display: flex;
-  overflow: hidden;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 15px;
-  justify-content: space-between;
 }
-.divMainStyle header p {
-  font-family: "Roboto", sans-serif;
-  color: white;
-  font-size: 35px;
-  padding-left: 15px;
-  font-weight: lighter;
-}
-.divMainStyle .temperatureAndIcon {
+
+.search-data__temperature {
   height: 80px;
   width: 100%;
   display: flex;
@@ -94,110 +81,130 @@ body {
   align-items: center;
   margin: 0px;
 }
-.divMainStyle .temperatureAndIcon p {
+.search-data__temperature p {
   font-family: "Roboto", sans-serif;
-  font-size: 55px;
+  font-size: 45px;
   padding: 5px 5px 5px 5px;
   color: white;
   font-weight: lighter;
 }
-.divMainStyle .temperatureAndIcon img {
-  height: 55px;
+.search-data__temperature img {
+  height: 45px;
 }
-.divMainStyle div {
+
+.search-data {
   width: 20%;
   overflow: hidden;
   height: max-content;
   margin: 20px;
   background-color: #0f4677;
 }
-.divMainStyle div .humidityAndWindTable {
+.search-data header {
+  display: flex;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.search-data header p {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 20px;
+  padding-left: 15px;
+  font-weight: lighter;
+}
+.search-data table {
   width: 100%;
   margin-top: 10px;
 }
-.divMainStyle div .humidityAndWindTable tr {
+.search-data table tr {
   display: flex;
   justify-content: center;
 }
-.divMainStyle div .humidityAndWindTable tr td {
+.search-data table tr td {
   font-family: "Roboto", sans-serif;
   color: white;
 }
-.divMainStyle div .humidityAndWindTable tr td p {
+.search-data table tr td p {
   margin: 0px 20px;
   font-size: 18px;
 }
-.divMainStyle div .humidityAndWindTable tr td:first-child {
-  border-right: 2px solid #faf607;
-}
-.divMainStyle div h3 {
+.search-data h3 {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   text-align: center;
-  padding: 5px 15px 5px 15px;
+  padding: 0px 10px 0px 10px;
   color: white;
   font-weight: lighter;
 }
-.divMainStyle div h4 {
+.search-data h4 {
   font-family: "Roboto", sans-serif;
-  font-size: 10px;
+  font-size: 8px;
   padding: 5px 15px 5px 15px;
   color: white;
   font-weight: lighter;
 }
-.divMainStyle div .forecastContainer {
+
+.search-data__forecast {
   display: flex;
   justify-content: flex-end;
-  margin: 15px 0px;
+  margin: 10px 0px;
   width: 100%;
   padding-right: 15px;
   height: 40px;
 }
-.divMainStyle div .forecastContainer button {
+.search-data__forecast button {
   color: white;
   font-family: "Roboto", sans-serif;
   border: none;
   background: transparent;
 }
-.divMainStyle div .forecastContainer button i {
+.search-data__forecast button .buttonDropdown {
   height: 20px;
   padding-left: 5px;
 }
-.divMainStyle div .forecastContainer button:hover i {
+.search-data__forecast button:hover i {
   color: #faf607;
 }
-.divMainStyle div .forecastContainer button:focus {
+.search-data__forecast button:focus {
   outline: none;
 }
-.divMainStyle div .forecastDivClass {
+
+.forecast-div-class {
   width: 100%;
+  display: flex;
+  justify-content: center;
   margin: 0px;
 }
-.divMainStyle div .forecastDivClass .forecastTable {
-  width: 100%;
-  margin: 0px;
+.forecast-div-class .forecast-table {
+  width: 90%;
+  margin: 0px 10px;
 }
-.divMainStyle div .forecastDivClass .forecastTable tr {
+.forecast-div-class .forecast-table tr {
   display: flex;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: 12px;
   color: white;
   justify-content: space-between;
 }
-.divMainStyle div .forecastDivClass .forecastTable .secondTr {
+.forecast-div-class .forecast-table .secondTr {
   border-bottom: 1px solid #faf607;
   border-top: 1px solid #faf607;
 }
-.divMainStyle div .forecastDivClass .forecastTable img {
-  height: 20px;
+.forecast-div-class .forecast-table img {
+  height: 15px;
 }
-.divMainStyle div .forecastDivClass .forecastTable .tableTemperatureAndIcon {
+.forecast-div-class .forecast-table .tableTemperatureAndIcon {
   display: flex;
 }
-.divMainStyle div .forecastDivClass .forecastTable .tableTemperatureAndIcon p {
+.forecast-div-class .forecast-table .tableTemperatureAndIcon p {
   padding-right: 10px;
+}
+
+.yellow-border {
+  border-right: 2px solid #faf607;
 }
 
 .windIcon {
@@ -208,37 +215,70 @@ body {
   height: 18px;
 }
 
-.exitButton {
+.exit-button {
   border: 0px;
   padding: 0px;
   margin-right: 15px;
   background: none;
 }
-.exitButton div {
+.exit-button div {
   margin: 0px;
   position: relative;
   border: none;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.exitButton div::before,
-.exitButton div::after {
+.exit-button div::before,
+.exit-button div::after {
   position: absolute;
   content: "";
   width: 100%;
   height: 3px;
   background-color: #faf607;
 }
-.exitButton div:hover::before {
+.exit-button div:hover::before {
   transition-duration: 1s;
   transform: rotate(45deg);
 }
-.exitButton div:hover::after {
+.exit-button div:hover::after {
   transition-duration: 1s;
   transform: rotate(-45deg);
+}
+
+.exitButton:focus {
+  outline: none;
+}
+
+.buttonForecast {
+  transform: rotate(-180deg);
+  height: 20px;
+  padding-right: 5px;
+}
+
+@media (max-width: 1100px) {
+  .search-data {
+    width: 40%;
+  }
+}
+@media (max-width: 720px) {
+  .search-data {
+    width: 80%;
+  }
+
+  .inputAndButtonContainer button {
+    width: 120px;
+    margin-top: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .inputAndButtonContainer input {
+    margin: 30px 25px 0px 25px;
+    font-size: 18px;
+    border-bottom: 1px solid white;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

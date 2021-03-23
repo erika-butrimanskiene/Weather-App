@@ -1,253 +1,292 @@
-*{
-    padding:0;
-    margin:0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 $default-font: 'Roboto', sans-serif;
 
-body{
-background:linear-gradient(-90deg, rgb(45, 130, 204), rgb(15, 76, 129));
+body {
+  background: linear-gradient(-90deg, rgb(45, 130, 204), rgb(15, 76, 129));
 }
 
-.inputAndButtonContainer{
-    display: flex;
-    justify-content: center;
-    button{
-        width: 160px;
-        margin-top: 60px;
-        height: 40px;
-        background-color:rgba(250, 246, 7, 0.90);
-        color:white;
-        font-size: 15px;
-        font-family: $default-font;
-        border: none;
-        border-radius: 30px;
-        }
-    button:focus{
-        outline: none;
-    }
-    button:hover{
-        background-color: white;
-        color: rgba(81, 81, 82);
-    }
-    input{
-        margin: 65px 25px 0px 25px;
-        border: none;
-        border-bottom: 1.5px solid white;
-        color: white;
-        font-weight: lighter;
-        font-size: 25px;
-        font-family: $default-font;
-        background: transparent;
-        width: 60%;
-    }
-    input:focus {
-        outline: none;
-    }
-}
-
-
-.headerStyle{
+.input-button-container {
+  display: flex;
+  justify-content: center;
+  button {
+    width: 160px;
+    margin-top: 35px;
+    height: 35px;
+    background-color: rgba(250, 246, 7, 0.9);
+    color: rgb(15, 76, 129);
+    font-size: 15px;
+    font-family: $default-font;
+    border: none;
+    border-radius: 30px;
+  }
+  button:focus {
+    outline: none;
+  }
+  button:hover {
     background-color: white;
-    display: flex;
-    p{
+    color: rgba(81, 81, 82);
+  }
+  input {
+    margin: 40px 25px 0px 25px;
+    border: none;
+    border-bottom: 1.5px solid white;
+    color: white;
+    font-weight: lighter;
     font-size: 25px;
-    line-height: 80px;
+    font-family: $default-font;
+    background: transparent;
+    width: 50%;
+  }
+  input:focus {
+    outline: none;
+  }
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  p {
+    font-size: 15px;
+    line-height: 50px;
     font-weight: bolder;
     color: rgb(15, 76, 129);
     font-family: $default-font;
     padding-left: 30px;
-    }
-    img{
-        height: 45px;
-        margin-top: 15px;
-        padding-left: 20px;
-    }
+  }
+  img {
+    height: 25px;
+    margin-top: 15px;
+    padding-left: 20px;
+  }
 }
 
-.divMainStyle{
-    display:flex;
-    flex-wrap: wrap;
+.search-output-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.search-data__temperature {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  p {
+    font-family: $default-font;
+    font-size: 45px;
+    padding: 5px 5px 5px 5px;
+    color: white;
+    font-weight: lighter;
+  }
+  img {
+    height: 45px;
+  }
+}
+
+.search-data {
+  width: 20%;
+  overflow: hidden;
+  height: max-content;
+  margin: 20px;
+  background-color: rgb(15, 70, 119);
+  header {
+    display: flex;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    p {
+      font-family: $default-font;
+      color: white;
+      font-size: 20px;
+      padding-left: 15px;
+      font-weight: lighter;
+    }
+  }
+  table {
+    width: 100%;
+    margin-top: 10px;
+    tr {
+      display: flex;
+      justify-content: center;
+      td {
+        font-family: $default-font;
+        color: white;
+        p {
+          margin: 0px 20px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  h3 {
+    font-family: $default-font;
+    font-size: 15px;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+    color: white;
+    font-weight: lighter;
+  }
+  h4 {
+    font-family: $default-font;
+    font-size: 8px;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    font-weight: lighter;
+  }
+}
+
+.search-data__forecast {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0px;
+  width: 100%;
+  padding-right: 15px;
+  height: 40px;
+  button {
+    color: white;
+    font-family: $default-font;
+    border: none;
+    background: transparent;
+    .buttonDropdown {
+      height: 20px;
+      padding-left: 5px;
+    }
+  }
+  button:hover {
+    i {
+      color: rgba(250, 246, 7);
+    }
+  }
+  button:focus {
+    outline: none;
+  }
+}
+
+.forecast-div-class {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  .forecast-table {
+    width: 90%;
+    margin: 0px 10px;
+    tr {
+      display: flex;
+      font-family: $default-font;
+      font-weight: lighter;
+      padding: 10px 20px;
+      font-size: 12px;
+      color: white;
+      justify-content: space-between;
+    }
+    .secondTr {
+      border-bottom: 1px solid rgba(250, 246, 7);
+      border-top: 1px solid rgba(250, 246, 7);
+    }
+    img {
+      height: 15px;
+    }
+    .tableTemperatureAndIcon {
+      display: flex;
+      p {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.yellow-border {
+  border-right: 2px solid rgba(250, 246, 7);
+}
+
+.windIcon {
+  height: 18px;
+}
+
+.humidityIcon {
+  height: 18px;
+}
+
+.exit-button {
+  border: 0px;
+  padding: 0px;
+  margin-right: 15px;
+  background: none;
+  div {
+    margin: 0px;
+    position: relative;
+    border: none;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    header{
-        display: flex;
-        overflow: hidden;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        justify-content: space-between;
-        p{
-            font-family: $default-font;
-            color: white;
-            font-size: 35px;
-            padding-left: 15px;
-            font-weight: lighter;
-        }
-    }
+  }
 
-    .temperatureAndIcon{
-        height: 80px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0px;
-        p{
-            font-family: $default-font;
-            font-size: 55px;
-            padding: 5px 5px 5px 5px;
-            color: white;
-            font-weight: lighter;
-        }
-        img{
-            height: 55px;
-        }
-    }
-
-    div{
-        width: 20%;
-        overflow: hidden;
-        height: max-content;
-        margin: 20px;
-        background-color: rgb(15, 70, 119);
-        .humidityAndWindTable{
-            width: 100%;
-            margin-top: 10px;
-            tr{
-                display: flex;
-                justify-content: center;
-                td{
-                    font-family: $default-font;
-                    color: white;
-                    p{
-                        margin: 0px 20px;
-                        font-size: 18px;
-                    }
-                }
-                td:first-child{
-                    border-right: 2px solid rgba(250, 246, 7);
-                }
-            }
-        }
-        h3{
-            font-family: $default-font;
-            font-size: 15px;
-            text-align: center;
-            padding: 5px 15px 5px 15px;
-            color: white;
-            font-weight: lighter;
-        }
-        h4{
-            font-family: $default-font;
-            font-size: 10px;
-            padding: 5px 15px 5px 15px;
-            color: white;
-            font-weight: lighter;
-        }
-        .forecastContainer{
-            display: flex;
-            justify-content: flex-end;
-            margin: 15px 0px;
-            width: 100%;
-            padding-right: 15px;
-            height: 40px;
-            button{
-                color: white;
-                font-family: $default-font;
-                border: none;
-                background: transparent;
-                i{
-                    height: 20px;
-                    padding-left: 5px;
-                }
-            }
-            button:hover{
-                i{
-                    color: rgba(250, 246, 7);
-                }
-            }
-            button:focus{
-                outline: none;
-            }
-        }
-
-        .forecastDivClass{
-            width: 100%;
-            margin: 0px;
-            .forecastTable{
-                width: 100%;
-                margin: 0px;
-                tr{
-                    display: flex;
-                    font-family: $default-font;
-                    font-weight: lighter;
-                    padding: 10px 20px;
-                    font-size: 15px;
-                    color: white;
-                    justify-content: space-between;
-                }
-                .secondTr{
-                    border-bottom: 1px solid  rgba(250, 246, 7);
-                    border-top: 1px solid  rgba(250, 246, 7);
-                }
-                img{
-                    height: 20px;
-                }
-                .tableTemperatureAndIcon{
-                    display: flex;
-                    p{
-                        padding-right: 10px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.windIcon{
-    height: 18px;
-}
-
-.humidityIcon{
-    height: 18px;
-}
-
-.exitButton{
-    border: 0px;
-    padding: 0px;
-    margin-right: 15px;
-    background:none;
-    div{
-        margin:0px;
-        position: relative;
-        border: none;
-        height: 30px;
-        width: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    div::before, 
-    div::after {
-    position:absolute;
-    content: "";
+  div::before,
+  div::after {
+    position: absolute;
+    content: '';
     width: 100%;
     height: 3px;
-    background-color: rgba(250, 246, 7);;
-    }
+    background-color: rgba(250, 246, 7);
+  }
 
-    div:hover::before{
-        transition-duration: 1s;
-        transform: rotate(45deg);
-    } 
-    
-    div:hover::after{
-        transition-duration: 1s;
-        transform: rotate(-45deg);
-    }
+  div:hover::before {
+    transition-duration: 1s;
+    transform: rotate(45deg);
+  }
+
+  div:hover::after {
+    transition-duration: 1s;
+    transform: rotate(-45deg);
+  }
 }
 
+.exitButton:focus {
+  outline: none;
+}
+
+.buttonForecast {
+  transform: rotate(-180deg);
+  height: 20px;
+  padding-right: 5px;
+}
+
+@media (max-width: 1100px) {
+  .search-data {
+    width: 40%;
+  }
+}
+
+@media (max-width: 720px) {
+  .search-data {
+    width: 80%;
+  }
+
+  .inputAndButtonContainer {
+    button {
+      width: 120px;
+      margin-top: 30px;
+      height: 30px;
+      font-size: 10px;
+    }
+    input {
+      margin: 30px 25px 0px 25px;
+      font-size: 18px;
+      border-bottom: 1px solid white;
+    }
+  }
+}
